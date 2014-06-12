@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE KDevPrjSession>
+<KDevPrjSession>
+ <DocsAndViews NumberOfDocuments="19" >
+  <Doc0 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/main.cpp" >
+   <View0 Encoding="" line="68" Type="Source" />
+  </Doc0>
+  <Doc1 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/ndsromorg.cpp" >
+   <View0 Encoding="" line="41" Type="Source" />
+  </Doc1>
+  <Doc2 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/ndsromorg.h" >
+   <View0 Encoding="" line="62" Type="Source" />
+  </Doc2>
+  <Doc3 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/cndsromaindlg.cpp" >
+   <View0 Encoding="" line="53" Type="Source" />
+  </Doc3>
+  <Doc4 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/cndsromaindlg.h" >
+   <View0 Encoding="" line="77" Type="Source" />
+  </Doc4>
+  <Doc5 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSdbIfc.cpp" >
+   <View0 Encoding="" line="447" Type="Source" />
+  </Doc5>
+  <Doc6 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSdbIfc.h" >
+   <View0 Encoding="" line="95" Type="Source" />
+  </Doc6>
+  <Doc7 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSromData.cpp" >
+   <View0 Encoding="" line="455" Type="Source" />
+  </Doc7>
+  <Doc8 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSromData.h" >
+   <View0 Encoding="" line="80" Type="Source" />
+  </Doc8>
+  <Doc9 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/cndsrodetaildlg.cpp" >
+   <View0 Encoding="" line="516" Type="Source" />
+  </Doc9>
+  <Doc10 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/cndsrodetaildlg.h" >
+   <View0 Encoding="" line="78" Type="Source" />
+  </Doc10>
+  <Doc11 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDStransfer.cpp" >
+   <View0 Encoding="" line="681" Type="Source" />
+  </Doc11>
+  <Doc12 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDStransfer.h" >
+   <View0 Encoding="" line="82" Type="Source" />
+  </Doc12>
+  <Doc13 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSROconfig.cpp" >
+   <View0 Encoding="" line="52" Type="Source" />
+  </Doc13>
+  <Doc14 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSROconfig.h" >
+   <View0 Encoding="" line="49" Type="Source" />
+  </Doc14>
+  <Doc15 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSdebug.h" >
+   <View0 Encoding="" line="48" Type="Source" />
+  </Doc15>
+  <Doc16 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSromScanner.cpp" >
+   <View0 Encoding="" line="95" Type="Source" />
+  </Doc16>
+  <Doc17 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSromScanner.h" >
+   <View0 Encoding="" line="53" Type="Source" />
+  </Doc17>
+  <Doc18 NumberOfViews="1" URL="file:///home/q/DEV/IT-Solutions/NDSromorg/src/NDSROversion.h" >
+   <View0 Encoding="" line="35" Type="Source" />
+  </Doc18>
+ </DocsAndViews>
+ <pluginList>
+  <kdevdebugger>
+   <breakpointList/>
+   <showInternalCommands value="0" />
+  </kdevdebugger>
+  <kdevastyle>
+   <Extensions ext="*.cpp *.h *.hpp,*.c *.h,*.cxx *.hxx,*.c++ *.h++,*.cc *.hh,*.C *.H,*.diff ,*.inl,*.java,*.moc,*.patch,*.tlh,*.xpm" />
+   <AStyle IndentPreprocessors="0" FillCount="4" PadParenthesesOut="1" IndentNamespaces="1" IndentLabels="1" Fill="Tabs" MaxStatement="40" Brackets="Break" MinConditional="-1" IndentBrackets="0" PadParenthesesUn="1" BlockBreak="0" KeepStatements="1" KeepBlocks="1" BlockIfElse="0" IndentSwitches="1" PadOperators="0" FStyle="UserDefined" IndentCases="0" FillEmptyLines="0" BracketsCloseHeaders="0" BlockBreakAll="0" PadParenthesesIn="1" IndentClasses="1" IndentBlocks="0" FillForce="0" />
+  </kdevastyle>
+  <kdevbookmarks>
+   <bookmarks/>
+  </kdevbookmarks>
+  <kdevvalgrind>
+   <executable path="" params="" />
+   <valgrind path="" params="" />
+   <calltree path="" params="" />
+   <kcachegrind path="" />
+  </kdevvalgrind>
+ </pluginList>
+</KDevPrjSession>

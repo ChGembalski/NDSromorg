@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NDS ROM ORG</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="functionTabs">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>2</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <widget class="QWidget" name="tabROMS">
+       <attribute name="title">
+        <string>ROMS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QFrame" name="ROMStools">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QToolButton" name="ROMStools_scan">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scan</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="ROMStools_romlist">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>R</string>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="ROMStools_scanlist">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>S</string>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="ROMStools_scanclear">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </widget>
+          <widget class="Line" name="ROMStools_line1">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>10</y>
+             <width>20</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+          <widget class="Line" name="ROMStools_line2">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>10</y>
+             <width>20</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="ROMStools_copy">
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="ROMStools_delete">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>D</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>10</y>
+             <width>20</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="ROMStable">
+          <property name="editTriggers">
+           <set>QAbstractItemView::DoubleClicked</set>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragOnly</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Icon</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ROM Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ROM Serial</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CRC32</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ROM Größe</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignLeft|AlignVCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Verleger</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabDEVICE">
+       <attribute name="title">
+        <string>DEVICE</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QFrame" name="DEVICEtools">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QToolButton" name="DEVICEtools_scan">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scan</string>
+           </property>
+          </widget>
+          <widget class="Line" name="DEVICEtools_line1">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>10</y>
+             <width>16</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="DEVICEtools_remove">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>R</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="DEVICEtable">
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Icon</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ROM Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ROM Serial</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CRC32</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ROM Größe</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignLeft|AlignVCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Verleger</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabFAVORITES">
+       <attribute name="title">
+        <string>Favoriten</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QFrame" name="FAVORITEStools">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QListWidget" name="FAVORITESlist">
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="FAVORITEStable">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <column>
+            <property name="text">
+             <string>ID</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Icon</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Status</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ROM Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ROM Serial</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>CRC32</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ROM Größe</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignLeft|AlignVCenter</set>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Verleger</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTOOLS">
+       <attribute name="title">
+        <string>Tools</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QFrame" name="TOOLStools">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="TOOLStable">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabDIRS">
+       <attribute name="title">
+        <string>Verzeichnisse</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QFrame" name="DIRStools">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QToolButton" name="DIRStools_add">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+           <property name="arrowType">
+            <enum>Qt::NoArrow</enum>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="DIRStools_del">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="DIRSlist">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Datei</string>
+    </property>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="actionExportROMListe"/>
+     <addaction name="actionExportROMDataListe"/>
+     <addaction name="actionExportROMCodeListe"/>
+     <addaction name="actionExportIMGListe"/>
+    </widget>
+    <widget class="QMenu" name="menuImport">
+     <property name="title">
+      <string>Import</string>
+     </property>
+     <addaction name="actionImportROMListe"/>
+     <addaction name="actionImportROMDataListe"/>
+     <addaction name="actionImportROMCodeListe"/>
+     <addaction name="actionImportIMGListe"/>
+    </widget>
+    <addaction name="menuImport"/>
+    <addaction name="menuExport"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Bearbeiten</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>Ansicht</string>
+    </property>
+    <widget class="QMenu" name="menuName">
+     <property name="title">
+      <string>Name</string>
+     </property>
+     <addaction name="actionJPN"/>
+     <addaction name="actionENG"/>
+     <addaction name="actionFRN"/>
+     <addaction name="actionGER"/>
+     <addaction name="actionITL"/>
+     <addaction name="actionSPN"/>
+     <addaction name="actionCHI"/>
+    </widget>
+    <addaction name="actionROMS"/>
+    <addaction name="actionDEVICE"/>
+    <addaction name="actionFAVORITES"/>
+    <addaction name="actionTOOLS"/>
+    <addaction name="actionDIRS"/>
+    <addaction name="separator"/>
+    <addaction name="menuName"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Hilfe</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+    <addaction name="actionAboutOt"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Beenden</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Einstellungen</string>
+   </property>
+  </action>
+  <action name="actionROMS">
+   <property name="text">
+    <string>ROMS</string>
+   </property>
+  </action>
+  <action name="actionDEVICE">
+   <property name="text">
+    <string>DEVICE</string>
+   </property>
+  </action>
+  <action name="actionFAVORITES">
+   <property name="text">
+    <string>Favoriten</string>
+   </property>
+  </action>
+  <action name="actionTOOLS">
+   <property name="text">
+    <string>Tools</string>
+   </property>
+  </action>
+  <action name="actionDIRS">
+   <property name="text">
+    <string>Verzeichnisse</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Über NDS ROM ORG</string>
+   </property>
+  </action>
+  <action name="actionAboutOt">
+   <property name="text">
+    <string>Über Qt</string>
+   </property>
+  </action>
+  <action name="actionJPN">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>JPN</string>
+   </property>
+  </action>
+  <action name="actionENG">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ENG</string>
+   </property>
+  </action>
+  <action name="actionFRN">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>FRN</string>
+   </property>
+  </action>
+  <action name="actionGER">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>GER</string>
+   </property>
+  </action>
+  <action name="actionITL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ITL</string>
+   </property>
+  </action>
+  <action name="actionSPN">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SPN</string>
+   </property>
+  </action>
+  <action name="actionCHI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>CHI</string>
+   </property>
+  </action>
+  <action name="actionExportROMListe">
+   <property name="text">
+    <string>ROM Liste</string>
+   </property>
+  </action>
+  <action name="actionExportIMGListe">
+   <property name="text">
+    <string>IMG Liste</string>
+   </property>
+  </action>
+  <action name="actionImportROMListe">
+   <property name="text">
+    <string>ROM Liste</string>
+   </property>
+  </action>
+  <action name="actionImportIMGListe">
+   <property name="text">
+    <string>IMG Liste</string>
+   </property>
+  </action>
+  <action name="actionImportROMDataListe">
+   <property name="text">
+    <string>ROM Data Liste</string>
+   </property>
+  </action>
+  <action name="actionExportROMDataListe">
+   <property name="text">
+    <string>ROM Data Liste</string>
+   </property>
+  </action>
+  <action name="actionImportROMCodeListe">
+   <property name="text">
+    <string>ROM Code Liste</string>
+   </property>
+  </action>
+  <action name="actionExportROMCodeListe">
+   <property name="text">
+    <string>ROM Code Liste</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
